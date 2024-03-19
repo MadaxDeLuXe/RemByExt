@@ -122,7 +122,7 @@
             btnListToDelete.TabIndex = 6;
             btnListToDelete.Text = "Create List...";
             btnListToDelete.UseVisualStyleBackColor = true;
-            btnListToDelete.Click += btnListToDelete_Click;
+            btnListToDelete.Click += BtnListToDelete_Click;
             // 
             // lblItemCount
             // 
@@ -169,7 +169,7 @@
             btnAbort.TabIndex = 10;
             btnAbort.Text = "Abbrechen";
             btnAbort.UseVisualStyleBackColor = true;
-            btnAbort.Click += btnAbort_Click;
+            btnAbort.Click += BtnAbort_Click;
             // 
             // Form1
             // 

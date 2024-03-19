@@ -1,4 +1,3 @@
-using Microsoft.VisualBasic.ApplicationServices;
 using static System.Windows.Forms.CheckedListBox;
 
 namespace RemByExt
@@ -42,12 +41,12 @@ namespace RemByExt
                 fi.Delete();
                 delCount++;
             }
-            if (delCount == toDelete.Count) 
-            { 
+            if (delCount == toDelete.Count)
+            {
                 toDelete.Clear();
                 delCount = 0;
             }
-            
+
             if (cbRemEmptyFolders.Checked)
             {
                 foreach (DirectoryInfo di in EmptyDirs)
@@ -63,7 +62,7 @@ namespace RemByExt
 
                 Analyse(tbPath.Text, true);
 
-                if (EmptyDirs.Count > 0) 
+                if (EmptyDirs.Count > 0)
                 {
                     foreach (DirectoryInfo di in EmptyDirs)
                     {
@@ -129,7 +128,6 @@ namespace RemByExt
             List<FileInfo> toDelete = new List<FileInfo>();
             if (dgvToDelete.Rows.Count > 0) { dgvToDelete.Rows.Clear(); }
 
-
             foreach (FileInfo fi in Fileinfos)
             {
                 if (checkedItemCollection.Contains(fi.Extension))
@@ -151,7 +149,7 @@ namespace RemByExt
             return toDelete;
         }
 
-        private void btnListToDelete_Click(object sender, EventArgs e)
+        private void BtnListToDelete_Click(object sender, EventArgs e)
         {
             if (toDelete.Count > 0) { toDelete.Clear(); }
 
@@ -172,7 +170,7 @@ namespace RemByExt
             }
         }
 
-        private void btnAbort_Click(object sender, EventArgs e)
+        private void BtnAbort_Click(object sender, EventArgs e)
         {
             Close();
         }
@@ -180,6 +178,6 @@ namespace RemByExt
         private void btnDelete_Click(object sender, EventArgs e)
         {
             Apply();
-        }        
+        }
     }
 }
